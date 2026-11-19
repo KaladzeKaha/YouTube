@@ -1,0 +1,48 @@
+{
+  "shop": "Эксперт",
+  "address": "Ленинский проспект, 68",
+  "phone": "+7 (39543) 6-56-71",
+  "group": "vk.com/club152063227",
+  "scenes": {
+    "1": {"duration": 3},
+    "2": {"duration": 4},
+    "3": {"duration": 5},
+    "4": {"duration": 6},
+    "5": {"duration": 6},
+    "6": {"duration": 5},
+    "7": {"duration": 4},
+    "8": {"duration": 5}
+  },
+  "blocks": [
+    {
+      "title": "до 3000 ₽",
+      "sum_from": 0,
+      "sum_to": 3000,
+      "items": [
+        { "photo": "images/products/01.jpg", "name": "Чайник", "price": "2490" },
+        { "photo": "images/products/02.jpg", "name": "Утюг", "price": "2790" },
+        { "photo": "images/products/03.jpg", "name": "Фен", "price": "1990" }
+      ]
+    },
+    {
+      "title": "до 7000 ₽",
+      "sum_from": 3000,
+      "sum_to": 7000,
+      "items": [
+        { "photo": "images/products/04.jpg", "name": "Микроволновка", "price": "6490" },
+        { "photo": "images/products/05.jpg", "name": "Мультиварка", "price": "5990" },
+        { "photo": "images/products/06.jpg", "name": "Обогреватель", "price": "4290" }
+      ]
+    },
+    {
+      "title": "до 15000 ₽",
+      "sum_from": 7000,
+      "sum_to": 15000,
+      "items": [
+        { "photo": "images/products/07.jpg", "name": "Телевизор", "price": "14990" },
+        { "photo": "images/products/08.jpg", "name": "Пылесос", "price": "12490" },
+        { "photo": "images/products/09.jpg", "name": "Кофемашина", "price": "13990" }
+      ]
+    }
+  ]
+}
