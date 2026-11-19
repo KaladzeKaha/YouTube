@@ -92,14 +92,15 @@ def main():
     rows.append(("Шрифт GolosText-Bold.ttf", "OK" if font.exists() else "НЕТ",
                  str(font.relative_to(ROOT))))
 
-    # 6. Музыка
+    # 6. Музыка (необязательно)
     music = find_media(ROOT / "audio", "music")
     if music:
         dur = ffprobe_duration(music)
         dur_s = f"{dur:.2f} c" if dur is not None else "?"
-        rows.append(("Музыка", "OK", f"{music.name}: {dur_s}"))
+        rows.append(("Музыка (необязательно)", "OK", f"{music.name}: {dur_s}"))
     else:
-        rows.append(("Музыка", "НЕТ", "audio/music.(mp3|wav|m4a) не найден"))
+        rows.append(("Музыка (необязательно)", "нет (необязательно)",
+                     "audio/music.(mp3|wav|m4a) не найден — ролик соберётся и без неё"))
 
     # 7. data.json заполнен?
     dj = ROOT / "data.json"
@@ -140,7 +141,7 @@ def main():
     for name, status, note in rows:
         print(f"{name:<{w1}} {status:<{w2}} {note}")
 
-    ok = all(s in ("OK",) for _, s, _ in rows)
+    ok = all(s in ("OK", "нет (необязательно)") for _, s, _ in rows)
     print("\nИТОГ:", "Все файлы на месте ✅" if ok else "Есть недостающие файлы ❌")
 
 
